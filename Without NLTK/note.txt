@@ -1,0 +1,41 @@
+**  encoding = 'utf=8'
+    to copy standard web font from website like blog, articles etc
+
+**  import string
+    this module allows us to work with special symbol like punctuation
+
+**  Remove all the special character
+    cleaned_text = text_lower.translate(str.maketrans("", "", string.punctuation))
+
+**  Tokenized/Convert all the sentence to a single string
+    tokenized_text = cleaned_text.split()
+
+
+**   stop_words = ["i", "me", "my", "myself", "we", "our", "ours", "ourselves", "you", "your", "yours", "yourself",
+              "yourselves", "he", "him", "his", "himself", "she", "her", "hers", "herself", "it", "its", "itself",
+              "they", "them", "their", "theirs", "themselves", "what", "which", "who", "whom", "this", "that", "these",
+              "those", "am", "is", "are", "was", "were", "be", "been", "being", "have", "has", "had", "having", "do",
+              "does", "did", "doing", "a", "an", "the", "and", "but", "if", "or", "because", "as", "until", "while",
+              "of", "at", "by", "for", "with", "about", "against", "between", "into", "through", "during", "before",
+              "after", "above", "below", "to", "from", "up", "down", "in", "out", "on", "off", "over", "under", "again",
+              "further", "then", "once", "here", "there", "when", "where", "why", "how", "all", "any", "both", "each",
+              "few", "more", "most", "other", "some", "such", "no", "nor", "not", "only", "own", "same", "so", "than",
+              "too", "very", "s", "t", "can", "will", "just", "don", "should", "now"]
+
+
+# NLP Emotion Algorithm
+# 1) Check if the word in the final word list is also present in emotion.txt
+#  - open the emotion file
+#  - Loop through each line and clear it
+#  - Extract the word and emotion using split
+
+# 2) If word is present -> Add the emotion to emotion_list
+# 3) Finally count each emotion in the emotion list
+
+** clear_line = line.replace("\n", "").replace(",", "").replace("'", "")
+    this is allows us to replace extra and special character line with empty string ''
+
+** .strip() to remove space from the start end ending
+
+** from collections import Counter
+   This module allows us to count string or word
